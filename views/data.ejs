@@ -1,0 +1,14 @@
+<% include partials/header %>
+<h1>
+  Input Your Run
+</h1>
+
+<form action="/data" method="POST">
+  <input type="number" name="distance" placeholder="distance">
+  <input type="number" name="hour" placeholder="hr">
+  <input type="number" name="minute" placeholder="min">
+  <input type="number" name="second" placeholder="sec">
+  <button>Submit</button>
+</form>
+
+<% include partials/footer %>
