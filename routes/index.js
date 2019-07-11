@@ -42,7 +42,8 @@ router.get("/login", function(req, res){
 });
 
 router.post("/login", passport.authenticate("local", {
-  successRedirect: "/",
+  //TODO - redirect to users index page.
+  successRedirect: "/users",
   failureRedirect: "/login"
 }), function(req, res) {
   
@@ -68,7 +69,11 @@ router.post("/data", function(req, res) {
     time: passedTime
   });
   newData.save(function (err){
-    if(err){console.log(err); res.redirect("/data");} else{res.redirect("/");}
+    if(err){console.log(err); 
+      res.redirect("/data");
+    } else{
+      res.redirect("/");
+    }
   });
 });
 

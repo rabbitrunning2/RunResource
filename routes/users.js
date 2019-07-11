@@ -4,6 +4,7 @@ var router  = express.Router();
 var User = require("../models/user");
 
 router.get("/", function(req, res){
+	//pass users
    res.render("users/index");
 });
 
